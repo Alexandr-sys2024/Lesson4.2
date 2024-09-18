@@ -67,3 +67,18 @@ if __name__ == "__main__":
     print("\nПользователи в системе после удаления:")
     for user in user_list:
         print(f"ID: {user.get_user_id()}, Имя: {user.get_name()}, Уровень доступа: {user.get_access_level()}")
+
+    print("\nПользователи в системе после удаления:")
+    for user in user_list:
+        print(f"ID: {user.get_user_id()}, Имя: {user.get_name()}, Уровень доступа: {user.get_access_level()}")
+
+    # Поиск пользователя по ID и изменение его имени
+    for user in user_list:
+        if user.get_user_id() == 3:  # 3 - ID пользователя Charlie
+            user.set_name("Djon")
+            print(f"Имя пользователя с ID 3 изменено на {user.get_name()}.")
+
+    # Проверим список после изменения имени
+    print("\nПользователи в системе после изменения имени:")
+    for user in user_list:
+        print(f"ID: {user.get_user_id()}, Имя: {user.get_name()}, Уровень доступа: {user.get_access_level()}")
